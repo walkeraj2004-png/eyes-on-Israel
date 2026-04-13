@@ -170,7 +170,7 @@ export function MoneyMapPanel({ dataset }: MoneyMapPanelProps) {
           id: f.id,
           label: f.name,
           type: f.entity_type,
-          size: 44 + Math.min(52, Math.round((foundationTotals.get(f.id) ?? 0) / 5_000_000)),
+          size: 50 + Math.min(40, Math.round((foundationTotals.get(f.id) ?? 0) / 5_000_000)),
         },
       }));
 
@@ -181,7 +181,7 @@ export function MoneyMapPanel({ dataset }: MoneyMapPanelProps) {
           id: r.id,
           label: r.name,
           type: r.entity_type,
-          size: 44 + Math.min(52, Math.round((recipientTotals.get(r.id) ?? 0) / 300_000)),
+          size: 15 + Math.min(45, Math.round((recipientTotals.get(r.id) ?? 0) / 200_000)),
         },
       }));
 
