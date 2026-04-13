@@ -3,90 +3,22 @@
 import { ChevronDown, ExternalLink } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import type { OrgBarEntry } from "@/components/org-mentions-chart";
 import type { Publication } from "@/types/publications";
 
-const BAR_COLOR = "#927949";
-const TOP_ORG_COUNT = 15;
-const RECENT_LIST_COUNT = 30;
-
-type OrgBarEntry = { name: string; fullName: string; count: number };
-
-function OrgBarTooltip({
-  active,
-  payload,
-}: {
-  active?: boolean;
-  payload?: { payload: OrgBarEntry }[];
-}) {
-  if (!active || !payload?.length) return null;
-  const { fullName, count } = payload[0].payload;
-  return (
-    <div className="min-w-44 rounded-xl border border-zinc-700 bg-zinc-900 px-4 py-3 text-sm text-zinc-100 shadow-lg">
-      <p className="mb-1 font-semibold leading-snug">{fullName}</p>
-      <p className="text-zinc-300">
-        {count} <span className="text-zinc-400">headlines</span>
-      </p>
-    </div>
-  );
-}
-
-function OrgMentionsChart({ data }: { data: OrgBarEntry[] }) {
-  if (!data.length) return null;
-  return (
-    <ResponsiveContainer width="100%" height={data.length * 32 + 24}>
-      <BarChart
-        data={data}
-        layout="vertical"
-        margin={{ top: 4, right: 32, bottom: 4, left: 0 }}
-        barCategoryGap="28%"
-      >
-        <CartesianGrid horizontal={false} strokeDasharray="3 4" stroke="rgba(120,105,80,0.15)" />
-        <XAxis
-          type="number"
-          axisLine={false}
-          tickLine={false}
-          tick={{ fill: "#a1a1aa", fontSize: 11 }}
-          allowDecimals={false}
-        />
-        <YAxis
-          type="category"
-          dataKey="name"
-          axisLine={false}
-          tickLine={false}
-          tick={{ fill: "#78716c", fontSize: 11 }}
-          width={148}
-        />
-        <Tooltip
-          cursor={{ fill: "rgba(146,121,73,0.08)" }}
-          content={(props) => (
-            <OrgBarTooltip
-              active={props.active}
-              payload={props.payload as unknown as { payload: OrgBarEntry }[] | undefined}
-            />
-          )}
-        />
-        <Bar dataKey="count" fill={BAR_COLOR} radius={[0, 3, 3, 0]} />
-      </BarChart>
-    </ResponsiveContainer>
-  );
-}
-
+// True dynamic import — recharts is NOT in this module's import graph at all.
+// The previous pattern (dynamic(() => Promise.resolve(localFn))) didn't help because
+// the top-level recharts imports were still evaluated when this module loaded server-side.
 const OrgMentionsChartDynamic = dynamic(
-  () => Promise.resolve(OrgMentionsChart),
+  () => import("@/components/org-mentions-chart").then((m) => m.OrgMentionsChart),
   { ssr: false },
 );
+
+const TOP_ORG_COUNT = 15;
+const RECENT_LIST_COUNT = 30;
 
 type PublicationsPanelProps = {
   publications: Publication[];
