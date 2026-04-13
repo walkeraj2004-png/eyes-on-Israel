@@ -1,0 +1,79 @@
+# ── Node ──────────────────────────────────────────────────────────────────────
+node_modules/
+
+# ── Python environments ───────────────────────────────────────────────────────
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# ── Next.js build output ──────────────────────────────────────────────────────
+.next/
+out/
+dist/
+coverage/
+
+# ── Data: exclude raw cached files (685 MB of XMLs/ZIPs/caches) ──────────────
+data/raw/
+data/cache/
+data/processed/
+
+# Exclude non-dashboard data files (other projects / large binaries / logs)
+data/*.csv
+data/*.parquet
+data/*.docx
+data/*.md
+data/*.png
+data/*.log
+data/ingest_990s.log
+data/teos_recipient_cache.json
+data/recipient_coverage_audit.json
+data/money-map.json
+data/prediction_log.json
+
+# The following data/*.json files ARE committed (frontend reads them at build):
+#   data/connections.json
+#   data/foundations.json
+#   data/grants.json
+#   data/personnel.json
+#   data/publications.json
+
+# ── Non-dashboard project files in this workspace ────────────────────────────
+analytics/
+cli/
+data_sources/
+notebooks/
+outputs/
+processing/
+reports/
+site/
+slurm/
+app_streamlit.py
+dashboard.py
+index.html
+pyproject.toml
+requirements.txt
+start.sh
+vite.config.js
+
+# Stray non-Next.js source files
+src/App.jsx
+src/data.js
+src/main.jsx
+src/styles.css
+src/flower_network/
+
+# ── Claude Code internal files ────────────────────────────────────────────────
+.claude/
+
+# ── OS / editor ───────────────────────────────────────────────────────────────
+.DS_Store
+.env
+.env.example
+.env.local
+.env*.local
+*.log
+tsconfig.tsbuildinfo

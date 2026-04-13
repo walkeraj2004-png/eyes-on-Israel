@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 18% 95%;
+    --foreground: 28 11% 12%;
+    --muted: 40 16% 89%;
+    --muted-foreground: 28 7% 38%;
+    --border: 32 12% 77%;
+    --accent: 35 34% 44%;
+    --accent-foreground: 45 35% 96%;
+    --surface: 45 24% 97%;
+    --panel: 45 20% 98%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at top, rgba(146, 121, 73, 0.14), transparent 32%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  }
+
+  a {
+    @apply transition-colors;
+  }
+
+  ::selection {
+    background: rgba(146, 121, 73, 0.22);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

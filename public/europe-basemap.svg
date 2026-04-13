@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1e33"/>
+      <stop offset="100%" stop-color="#0a1626"/>
+    </linearGradient>
+    <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#315675"/>
+      <stop offset="100%" stop-color="#274863"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#sea)"/>
+
+  <g fill="url(#land)" stroke="#5a7e9d" stroke-width="2.2" opacity="0.88">
+    <path d="M182 470l54-76 88-40 86-10 98-45 103-21 86 8 63 52 48 70-16 66-71 48-121 40-123 0-85-26-83-6-74-29z"/>
+    <path d="M542 538l34-63 62-33 84 10 73 48-16 58-86 30-79-8-51-18z"/>
+    <path d="M620 416l20-82 66-66 78-18 65 28 2 71-56 43-77 20z"/>
+    <path d="M478 542l17-69 52-34 46 20-18 62-39 48z"/>
+    <path d="M322 282l42-78 64-57 48 11 18 58-41 54-56 38z"/>
+    <path d="M293 322l32-16 18 43-26 33-43-7-6-30z"/>
+    <path d="M826 497l49-37 67 7 50 41-23 39-81 25-54-16z"/>
+    <path d="M932 296l48-26 40 18-9 36-44 17-29-13z"/>
+    <path d="M1042 352l39-16 27 13-5 30-34 16-26-11z"/>
+  </g>
+
+  <g stroke="#355a78" stroke-width="1" opacity="0.45">
+    <path d="M0 140h1200M0 280h1200M0 420h1200M0 560h1200"/>
+    <path d="M150 0v700M300 0v700M450 0v700M600 0v700M750 0v700M900 0v700M1050 0v700"/>
+  </g>
+
+  <text x="26" y="44" fill="#9fc3e4" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700">Europe Basemap</text>
+</svg>

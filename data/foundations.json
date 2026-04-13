@@ -1,0 +1,98 @@
+[
+  {
+    "id": "adelson-family-foundation",
+    "name": "Adelson Family Foundation",
+    "ein": "04-7024330",
+    "total_granted": 56290460,
+    "grant_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  },
+  {
+    "id": "charles-and-lynn-schusterman-family-foundation",
+    "name": "Charles And Lynn Schusterman Family Foundation",
+    "ein": "73-1312965",
+    "total_granted": 0,
+    "grant_years": []
+  },
+  {
+    "id": "ford-foundation",
+    "name": "Ford Foundation",
+    "ein": "13-1684331",
+    "total_granted": 221914631,
+    "grant_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  },
+  {
+    "id": "koret-foundation",
+    "name": "Koret Foundation",
+    "ein": "94-1624987",
+    "total_granted": 29756500,
+    "grant_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  },
+  {
+    "id": "marcus-foundation-inc",
+    "name": "Marcus Foundation Inc",
+    "ein": "58-1815651",
+    "total_granted": 51974046,
+    "grant_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  },
+  {
+    "id": "open-society-institute",
+    "name": "Open Society Institute",
+    "ein": "13-7029285",
+    "total_granted": 52555711,
+    "grant_years": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "rockefeller-brothers-fund-inc",
+    "name": "Rockefeller Brothers Fund Inc",
+    "ein": "13-1760106",
+    "total_granted": 31327571,
+    "grant_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  },
+  {
+    "id": "the-tikvah-fund",
+    "name": "The Tikvah Fund",
+    "ein": "13-3676152",
+    "total_granted": 11089439,
+    "grant_years": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  }
+]
