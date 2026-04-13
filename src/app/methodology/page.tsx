@@ -119,7 +119,7 @@ export default function MethodologyPage() {
                     {
                       ein: "73-1312965",
                       name: "Charles and Lynn Schusterman Family Foundation",
-                      note: "Grant schedule filed as PDF attachment — individual grants not available in XML",
+                      note: "Grant schedule extracted via OCR from 990-PF PDF attachments (tax years 2021–2022). 2020 and 2023–2024 PDF attachments unavailable.",
                     },
                     { ein: "13-3676152", name: "The Tikvah Fund" },
                   ].map((f) => (
@@ -140,11 +140,14 @@ export default function MethodologyPage() {
 
           <p>
             The Schusterman Foundation is included because it is one of the largest US foundations
-            focused on Israel-related giving. Despite a complete set of 990-PF filings in the IRS
-            TEOS system, every filing routes its grant schedule to a PDF attachment rather than
-            itemizing recipients in the XML return. The total disbursed ($300–365 million per year)
-            is documented in the filings; individual recipients are not machine-readable. This is a
-            filing-format limitation, not an editorial exclusion.
+            focused on Israel-related giving. Every filing routes its grant schedule to a PDF
+            attachment rather than itemizing recipients in the XML return. For tax years 2021 and
+            2022, individual grant records were recovered by OCR-processing the PDF attachments using
+            pytesseract at 300 DPI. This yielded 128 Israel-related grants totaling approximately
+            $139 million across the two years. The 2020 filing&rsquo;s PDF attachment is not
+            available through IRS TEOS for that e-filed return; the 2023 PDF attachment downloaded
+            from ProPublica contained a contributor schedule (Schedule B) rather than the grant
+            schedule, and the 2024 filing was similarly incomplete.
           </p>
         </Section>
 
@@ -227,10 +230,12 @@ export default function MethodologyPage() {
             in this pipeline without manual transcription.
           </p>
           <p>
-            <strong className="text-foreground">Schusterman Foundation grants.</strong> As noted
-            above, the Charles and Lynn Schusterman Family Foundation files its grant schedules as
-            PDF attachments. Individual recipient data for approximately $1.7 billion in grants
-            across five filing years is not available in machine-readable form.
+            <strong className="text-foreground">Schusterman Foundation grants.</strong> Grant
+            records for tax years 2021 and 2022 were recovered via OCR from PDF attachments (128
+            Israel-related grants, ~$139M). The 2020, 2023, and 2024 grant schedule attachments were
+            not available in machine-readable form at the time of data collection; the total
+            disbursed across those three years ($300–365M/year) is documented in the filings but
+            individual recipients are excluded from this dataset.
           </p>
           <p>
             <strong className="text-foreground">Recipient 990 coverage.</strong> Personnel

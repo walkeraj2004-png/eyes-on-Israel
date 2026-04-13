@@ -16,8 +16,13 @@
     "id": "charles-and-lynn-schusterman-family-foundation",
     "name": "Charles And Lynn Schusterman Family Foundation",
     "ein": "73-1312965",
-    "total_granted": 0,
-    "grant_years": []
+    "total_granted": 139351902,
+    "grant_years": [
+      2021,
+      2022
+    ],
+    "data_source": "ocr_pdf",
+    "data_source_note": "Israel-related grants extracted via OCR from PDF attachment. Source: ProPublica 990-PF PDFs. Includes directed (explicit Israel purpose), israel_adjacent (general support to multi-program Jewish orgs), and general."
   },
   {
     "id": "ford-foundation",

@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "dev": "python3 scripts/ingest_990s.py && python3 scripts/extract_personnel.py && python3 scripts/collect_publications.py && next dev",
-    "build": "python3 scripts/ingest_990s.py && python3 scripts/extract_personnel.py && python3 scripts/collect_publications.py && next build",
+    "dev": "python3 scripts/ingest_990s.py && python3 scripts/extract_personnel.py && python3 scripts/collect_publications.py && python3 scripts/extract_schusterman.py --merge-only && next dev",
+    "build": "python3 scripts/ingest_990s.py && python3 scripts/extract_personnel.py && python3 scripts/collect_publications.py && python3 scripts/extract_schusterman.py --merge-only && next build",
     "build:vercel": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit"
